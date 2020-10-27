@@ -1,6 +1,7 @@
 //Promesas
 //import {getHeroeById, getHeroesByOwner} from './bases/08-imp-exp'
 import {getHeroeById} from '../bases/08-imp-exp'
+
 /* 
 const promesa = new Promise( (resolve, reject) => {
 
