@@ -65,8 +65,39 @@ En esta sección se dan los primeros pasos en react, en donde, poco a poco vamos
 * enzyme-to-json convierte Enzyme wrappers a un formato compatible de pruebas snapshots de Jest
 [enzyme-to-json](https://www.npmjs.com/package/enzyme-to-json "enzyme-to-json")
 
+
 ## Sección 6
+En esta sección realizamos una aplicación llamada GifExpertApp que consiste en un buscador de gif a través de la API de Giphy
+* Documentación de Giphy
+[Documentación de Giphy](https://developers.giphy.com/ "Giphy")
+    * [Search Endpoint](https://developers.giphy.com/docs/api/endpoint/#search "Endpoint")
 
 * Documentación sobre React
 [Documentación de React](https://es.reactjs.org/docs/getting-started.html "React")
     * [Estructura de archivos](https://es.reactjs.org/docs/faq-structure.html)
+
+* Pagina de animaciones con CSS
+[Animate.css](https://animate.style/)
+
+
+## Sección 7
+En esta sección realizamos el build de producción y despliegue en Github Pages de nuestra aplicación anterior
+*  NPM Package
+[NPM Package](https://www.npmjs.com/package/http-server "NPM")
+
+
+## Sección 8
+Sección de creación de pruebas para la aplicación GifExpert y probar sus componentes
+*  Para pruebas sobre custom Hooks
+[React Hooks Testing Library](https://www.npmjs.com/package/http-server "NPM")
+https://react-hooks-testing-library.com/
+
+## Sección 9
+Conocemos distintos Hooks que viene incluidos en React y los aplicamos en pequeños ejemplos
+
+* Documentacion The Breaking Bad API
+[Documentacion The Breaking Bad API](https://breakingbadapi.com/documentation "BBAPI")
+
+
+* useLayoutEffect, documentacion de ReactJS
+[Documentacion de ReactJS](https://es.reactjs.org/docs/hooks-reference.html#uselayouteffect )
