@@ -50,7 +50,6 @@ const loginUsuario = async(req, res = response ) => {
     const { email, password } = req.body;
 
     try {
-
         const usuario = await Usuario.findOne({ email });
 
         if ( !usuario) {
@@ -80,6 +79,7 @@ const loginUsuario = async(req, res = response ) => {
         })
 
     } catch (error) {
+        console.log(error);
         res.status(500).json({
             ok: false,
             msg: 'Por favor hable con el administrador'
@@ -93,10 +93,12 @@ const revalidarToken = async(req, res = response ) => {
     const { uid, name} = req;
 
     // Generar un neuvo JWT y retornarlo en esta peticion
-    const token = await generarJWT( uid, name);
+    const token = await generarJWT( uid, name );
 
     res.json({
         ok: true,
+        uid,
+        name,
         token
     })
 }

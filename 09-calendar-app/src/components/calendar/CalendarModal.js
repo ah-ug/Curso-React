@@ -5,15 +5,15 @@ import DateTimePicker from 'react-datetime-picker';
 import moment from 'moment';
 import Swal from 'sweetalert2';
 import { uiCloseModal } from '../../actions/ui';
-import { eventAddNew, eventClearActiveEvent, eventUpdated } from '../../actions/events';
+import { eventClearActiveEvent, eventStartAddNew, eventstartUpdate } from '../../actions/events';
 const customStyles = {
     content : {
-      top                   : '50%',
-      left                  : '50%',
-      right                 : 'auto',
-      bottom                : 'auto',
-      marginRight           : '-50%',
-      transform             : 'translate(-50%, -50%)'
+    top                   : '50%',
+    left                  : '50%',
+    right                 : 'auto',
+    bottom                : 'auto',
+    marginRight           : '-50%',
+    transform             : 'translate(-50%, -50%)'
     }
 };
 Modal.setAppElement('#root');
@@ -95,16 +95,9 @@ export const CalendarModal = () => {
         
         // TODO: Realizar Grabacion
         if ( activeEvent) {
-            dispatch( eventUpdated( formValues ) );
+            dispatch( eventstartUpdate(formValues) );
         } else {
-            dispatch( eventAddNew({
-                ...formValues,
-                id: new Date().getTime(),
-                user: {
-                    _id: '123',
-                    name: 'Arturo',
-                }
-            }) );
+            dispatch( eventStartAddNew(formValues) );
         }
         
         setTitleValid(true);
@@ -113,14 +106,14 @@ export const CalendarModal = () => {
 
     return (
         <Modal
-          isOpen={ modalOpen }
+            isOpen={ modalOpen }
         //   onAfterOpen={afterOpenModal}
-          onRequestClose={ closeModal }
-          style={ customStyles }
-          closeTimeout={ 200 }
-          contentLabel="Example Modal"
-          className="modal"
-          overlayClassName="modal-fondo"
+            onRequestClose={ closeModal }
+            style={ customStyles }
+            closeTimeout={ 200 }
+            contentLabel="Example Modal"
+            className="modal"
+            overlayClassName="modal-fondo"
         >
             <h1> { (activeEvent) ? 'Editar evento:' : 'Nuevo evento' } </h1>
             <hr />
